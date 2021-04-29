@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS todoitems CASCADE;
+
+CREATE TABLE IF NOT EXISTS todoitems(
+  id SERIAL NOT NULL,
+  title VARCHAR(255),
+  done BOOLEAN,
+  tododate TIMESTAMP NOT NULL,
+  user_id VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+ALTER SEQUENCE todoitems_id_seq INCREMENT BY 100;
